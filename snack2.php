@@ -14,7 +14,7 @@ $age = $_GET['age'] ?? "";
 
 
 if ($name && $mail && $age) {
-  if (strlen($name) > 3) $has_name = true;
+  if (mb_strlen($name) > 3) $has_name = true;
   if (strpos($mail, "@") && strpos($mail, ".")) $has_mail = true;
   if (is_numeric($age)) $has_age = true;
 }

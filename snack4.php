@@ -2,22 +2,18 @@
 
 <?php
  
-  function getArrayNumber($min, $max, $nItems){
-    $numbers = [];
-    while(count($numbers) < $nItems) {
+ $numbers = [];
 
-          $number = rand(1,100);
-  
-          if(!in_array($number,$numbers)){
-              $numbers[] = $number;
-          }
-      }
-    
-   return $numbers;
+ while(count($numbers) < 15) {
+ 
+     $number = rand(1,100);
+ 
+     if(!in_array($number,$numbers)){
+         $numbers[] = $number;
+     }
  }
-
-
- print_r(getArrayNumber(1,100,15))
+ 
+ var_dump($numbers);
  
  
 ?>
